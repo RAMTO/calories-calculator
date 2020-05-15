@@ -1,0 +1,84 @@
+{% set pageCanonical = "" %}
+{% set pageClass = "page-default" %}
+{% set pageTitle = "Calories Calculator" %}
+{% set pageDescription = "" %}
+{% set pageKeywords = "" %}
+
+{% extends "partials/_layout.njk" %}
+
+{% block content %}
+
+<section class="section py-6 py-md-10 py-mg-15">
+  <div class="container">
+    <div>
+      <h1 class="text-mega">Welcome to Calories Calculator!</h1>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="text-subheader d-1">Made with 💜 by <a href="https://www.dobreff.net/" class="link-primary" target="_blank" rel="noopener">Martin Dobrev</a></h2>
+    </div>
+
+    <div class="row mt-5 mt-lg-7">
+      <div class="col-lg-10 col-mg-8">
+        <div class="card p-4">
+          <h2 class="text-title">Calories to grams breakdown</h2>
+
+          <hr class="separator mt-3">
+
+          <form id="form1" action="" class="mt-5">
+            <div class="row mt-5">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="text-label" for="">Total calories per day</label>
+                  <input name="totalCalories" type="text" class="form-control" value="1400">
+                </div>
+
+                <div class="form-group mt-5">
+                  <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 mt-4 mt-md-0">
+                <div class="form-group">
+                  <label class="text-label" for="">% of calories from protein</label>
+                  <input name="percProtein" type="text" class="form-control" value="40">
+                </div>
+
+                <div class="form-group mt-4">
+                  <label class="text-label" for="">grams of protein</label>
+                  <input name="gramsProtein" type="text" class="form-control" disabled>
+                </div>
+              </div>
+
+              <div class="col-md-3 mt-4 mt-md-0">
+                <div class="form-group">
+                  <label class="text-label" for="">% of calories from carbs</label>
+                  <input name="percCarbs" type="text" class="form-control" value="20">
+                </div>
+
+                <div class="form-group mt-4">
+                  <label class="text-label" for="">grams of carbs</label>
+                  <input name="gramsCarbs" type="text" class="form-control" disabled>
+                </div>
+              </div>
+
+              <div class="col-md-3 mt-4 mt-md-0">
+                <div class="form-group">
+                  <label class="text-label" for="">% of calories from fats</label>
+                  <input name="percFats" type="text" class="form-control" value="40">
+                </div>
+
+                <div class="form-group mt-4">
+                  <label class="text-label" for="">grams of fats</label>
+                  <input name="gramsFats" type="text" class="form-control" disabled>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
